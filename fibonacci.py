@@ -1,7 +1,7 @@
 from math import sqrt
 
 #iterativ
-def fib1(n):
+def ifib(n):
     if n < 0:
         raise ValueError("Negative arguments not implemented")
     if n == 0:
@@ -20,7 +20,7 @@ def fib1(n):
         return f
 
 # rekursiv
-def fib2(n):
+def rfib(n):
     if n < 0:
         raise ValueError("Negative arguments not implemented")
     if n == 0:
@@ -28,16 +28,10 @@ def fib2(n):
     if n == 1:
         return 1
     else:
-        return fib1(n-1) + fib1(n-2)
-
-# se side 59 i introduction to algorithms (algdat)
-# avrundingsfeil for store n
-def fib3(n):
-    phi = (1+sqrt(5))/2
-    return int((phi**n)/sqrt(5) + 0.5)
+        return rfib(n-1) + rfib(n-2)
 
 # Fast doubling Fibonacci algorithm
-def fib4(n):
+def fdfib(n):
     if n < 0:
         raise ValueError("Negative arguments not implemented")
     return _fib(n)[0]
@@ -54,6 +48,13 @@ def _fib(n):
             return (c, d)
         else:
             return (d, c + d)
+
+# se side 59 i introduction to algorithms (algdat)
+# avrundingsfeil for store n
+def fib4(n):
+    phi = (1+sqrt(5))/2
+    return int((phi**n)/sqrt(5) + 0.5)
+
 
 
 '''
