@@ -35,11 +35,9 @@ long _rfib(int n) {
     if (n < 0) {
         return -1;
     } else if (n == 0) {
-        long f0 = 0;
-        return f0;
+        return 0l;
     } else if (n == 1) {
-        long f1 = 1;
-        return f1;
+        return 1l;
     } else {
         return _rfib(n-1) + _rfib(n-2);
     }
