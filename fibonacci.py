@@ -10,12 +10,10 @@ def ifib(n):
         return 1
     else:
         i = 2
-        fpp = 1
-        fp = 1
+        fp, fpp = 1, 1
         while i < n:
             f = fp + fpp
-            fpp = fp
-            fp = f
+            fp, fpp = f, fp
             i += 1
         return f
 
