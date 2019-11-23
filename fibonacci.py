@@ -4,10 +4,8 @@ from math import sqrt
 def ifib(n):
     if n < 0:
         raise ValueError("Negative arguments not implemented")
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
+    if n == 0 or n == 1:
+        return n
     else:
         i = 2
         fp, fpp = 1, 1
@@ -21,10 +19,8 @@ def ifib(n):
 def rfib(n):
     if n < 0:
         raise ValueError("Negative arguments not implemented")
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
+    if n == 0 or n == 1:
+        return n
     else:
         return rfib(n-1) + rfib(n-2)
 
